@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%- include('./layouts/_links.ejs') %>
+    <title>Blog</title>
+  </head>
+  <body>
+    <%- include('./layouts/_nav.ejs') %>
+
+   <div class="container-fluid">
+    <div class="container">
+      <form action="/blog-update" method="post">
+         <input type="hidden" name="id" value="<%= details._id %>">
+          <input type="text" 
+          name="title"
+          value="<%= details.title %>"
+          class="form-control">
+        <br>
+        <input type="text" 
+        name="description"
+        value="<%= details.description %>"
+        class="form-control">
+        <br>
+        <button type="submit" class="btn btn-success">Update</button>
+      </form>
+    </div>
+
+
+   <%-include('./layouts/_js.ejs') %>
+  </body>
+</html>

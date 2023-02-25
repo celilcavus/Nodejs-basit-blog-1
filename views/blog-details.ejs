@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/style/style.css" />
+    <%- include('./layouts/_links.ejs') %>
+    <title>index</title>
+  </head>
+  <body>
+    <%- include('./layouts/_nav.ejs') %>
+
+    <div class="container-fluid index-cont">
+      <div class="row">
+      
+        <div class="col-sm-12 col-md-3">
+         
+            <div class="card" style="width: 18rem;">
+              <img src="/image/image1.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><%= details.title %></h5>
+                <p class="card-text"><%=details.description %></p>
+                <a href="/blog-del/<%= details._id%>" class="btn btn-danger">Delete</a>
+                <a href="/blog-update/<%= details._id%>" class="btn btn-warning">Update</a>
+              </div>
+            </div>
+        </div>
+       
+      </div>
+    </div>
+
+    
+    <%-include('./layouts/_js.ejs') %>
+  </body>
+</html>

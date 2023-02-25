@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%- include('./layouts/_links.ejs') %>
+    <title>Blog</title>
+  </head>
+  <body>
+    <%- include('./layouts/_nav.ejs') %>
+
+   <div class="container-fluid">
+    <div class="container">
+      <form action="/add-blog" method="post">
+          <input type="text" 
+          name="title"
+          class="form-control">
+        <br>
+        <input type="text" 
+        name="description"
+        class="form-control">
+        <br>
+        <button type="submit" class="btn btn-success">Kaydet</button>
+      </form>
+    </div>
+
+
+   <%-include('./layouts/_js.ejs') %>
+  </body>
+</html>
